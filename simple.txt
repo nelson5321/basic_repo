@@ -1,0 +1,67 @@
+Alex@Alexs-mba basic_repo % git add clone git@github.com:nelson5321/basic_repo.git
+Alex@Alexs-mba basic_repo % 
+Alex@Alexs-mba basic_repo % git add test123 
+Alex@Alexs-mba basic_repo % git status
+On branch test
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   test123
+
+Alex@Alexs-mba basic_repo % git commit -m "test file"
+[test 5a294aa] test file
+ Committer: Alex Nelson <Alex@Alexs-mba.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test123
+Alex@Alexs-mba basic_repo % git push origin test
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 290 bytes | 290.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'test' on GitHub by visiting:
+remote:      https://github.com/nelson5321/basic_repo/pull/new/test
+remote: 
+To github.com:nelson5321/basic_repo.git
+ * [new branch]      test -> test
+Alex@Alexs-mba basic_repo % git branch
+  main
+* test
+Alex@Alexs-mba basic_repo % git checkout main
+Switched to branch 'main'
+Your branch is up to date with 'origin/main'.
+Alex@Alexs-mba basic_repo % git branch
+* main
+  test
+Alex@Alexs-mba basic_repo % ls
+LICENSE		README.md
+Alex@Alexs-mba basic_repo % git pull
+Warning: Permanently added the RSA host key for IP address '192.30.255.112' to the list of known hosts.
+remote: Enumerating objects: 1, done.
+remote: Counting objects: 100% (1/1), done.
+remote: Total 1 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (1/1), done.
+From github.com:nelson5321/basic_repo
+   f2c58c4..8636493  main       -> origin/main
+Updating f2c58c4..8636493
+Fast-forward
+ test123 | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 test123
+Alex@Alexs-mba basic_repo % ls
+LICENSE		README.md	test123
+
